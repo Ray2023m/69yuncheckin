@@ -115,25 +115,12 @@ def send_message(msg="", BotToken="", ChatID=""):
         # 构建消息内容
         message_text = f"执行时间: {formatted_time}\n{msg}"
 
-        # 构造按钮的键盘布局
-        keyboard = {
-            "inline_keyboard": [
-                [
-                    {
-                        "text": "一休交流群",
-                        "url": "https://t.me/yxjsjl"
-                    }
-                ]
-            ]
-        }
-
         # 发送消息时附带内联按钮
         url = f"https://api.telegram.org/bot{BotToken}/sendMessage"
         payload = {
             "chat_id": ChatID,
             "text": message_text,
             "parse_mode": "HTML",
-            "reply_markup": json.dumps(keyboard)
         }
 
         try:
