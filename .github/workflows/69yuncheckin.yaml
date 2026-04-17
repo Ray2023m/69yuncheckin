@@ -27,7 +27,7 @@ jobs:
       # 可以继续扩展更多用户和密码
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
         uses: actions/setup-python@v5
